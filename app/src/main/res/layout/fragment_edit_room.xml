@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EditRoomFragment">
+
+    <data>
+        <!--        <variable-->
+        <!--            name="reserveViewModel"-->
+        <!--            type="com.example.hotelix_application.model.ApplicationTaskViewModel"/>-->
+
+        <variable
+            name="editRoomFragment"
+            type="com.example.hotelix_application.EditRoomFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/editRoomConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/application_theme">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/title_spacing_top"
+            android:text="Change room status"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/reservation_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Room ID"
+            android:textAlignment="center"
+            android:textColor="@color/id_tag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/ReserveID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Room ID"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.171"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reservation_id" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ReserveID_field"
+            android:layout_width="294dp"
+            android:layout_height="61dp"
+            android:background="@drawable/rounded_box"
+            android:gravity="center|center_vertical"
+            android:textAlignment="gravity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ReserveID"
+            android:textColor="@color/black"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Room Status"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.181"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ReserveID_field" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/roomStatus"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="291dp"
+            android:layout_height="66dp"
+            android:gravity="center|center_vertical"
+            android:textAlignment="gravity"
+            android:theme="@style/search_view_theme"
+            app:boxStrokeColor="@color/white"
+            app:boxStrokeWidth="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:inputType="none"
+                android:text="pending"
+                android:textColor="@color/black"
+                android:theme="@style/search_view_theme"
+                app:boxStrokeColor="@color/white"
+                app:boxStrokeWidth="0dp">
+
+            </AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/modify_btn"
+            android:layout_width="@dimen/regular_btn_width"
+            android:layout_height="@dimen/regular_btn_height"
+            android:layout_marginTop="48dp"
+            android:backgroundTint="@color/btnColorBlack"
+
+            android:onClick="@{()-> editRoomFragment.updateRoomStatus()}"
+            android:text="Confirm"
+            app:cornerRadius="@dimen/btn_radius_1"
+            app:layout_constraintTop_toBottomOf="@id/roomStatus"
+            app:layout_constraintEnd_toStartOf="@+id/cancel_button"
+            app:layout_constraintHorizontal_bias="0.733"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintVertical_bias="0.613" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_button"
+            android:layout_width="@dimen/regular_btn_width"
+            android:layout_height="@dimen/regular_btn_height"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="48dp"
+            android:backgroundTint="@color/btnColorRed"
+            android:onClick="@{() -> editRoomFragment.nav()}"
+            android:text="@string/cancel"
+            app:cornerRadius="@dimen/btn_radius_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roomStatus" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

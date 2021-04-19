@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".paymentfragment.DisplayPaymentInfoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/display_payment_info_constrainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/application_theme">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/customer_name_view"
+            android:layout_width="134dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/btnColorLightBlue"
+            android:text="@string/customer_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_small"
+            app:cornerRadius="@dimen/btn_radius_1"
+            app:icon="@drawable/ic_face"
+            app:iconGravity="top"
+            app:iconSize="50dp"
+            app:iconTint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:clickable="false"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/reservation_id_view"
+            android:layout_width="134dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:backgroundTint="@color/btnColorLightBlue"
+            android:text="@string/reservation_id"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_small"
+            app:cornerRadius="@dimen/btn_radius_1"
+            app:icon="@drawable/ic_identity"
+            app:iconGravity="top"
+            app:iconSize="50dp"
+            app:iconTint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:clickable="false"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/payment_method_view"
+            android:layout_width="134dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/btnColorLightBlue"
+            android:text="@string/payment_method"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_small"
+            app:cornerRadius="@dimen/btn_radius_1"
+            app:icon="@drawable/ic_payment_method"
+            app:iconGravity="top"
+            app:iconSize="50dp"
+            app:iconTint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customer_name_view"
+            android:clickable="false"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/paid_amount_view"
+            android:layout_width="134dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:backgroundTint="@color/btnColorLightBlue"
+            android:text="@string/paid_amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_small"
+            app:cornerRadius="@dimen/btn_radius_1"
+            app:icon="@drawable/ic_paid_amount"
+            app:iconGravity="top"
+            app:iconSize="50dp"
+            app:iconTint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reservation_id_view"
+            android:clickable="false"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/payment_date_view"
+            android:layout_width="134dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:backgroundTint="@color/btnColorLightBlue"
+            android:text="@string/payment_date"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_small"
+            app:cornerRadius="@dimen/btn_radius_1"
+            app:icon="@drawable/ic_date"
+            app:iconGravity="top"
+            app:iconSize="50dp"
+            app:iconTint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/payment_method_view"
+            android:clickable="false"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/view_history_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="60dp"
+            android:backgroundTint="@color/id_tag"
+            android:text="@string/history"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/refund_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="60dp"
+            android:backgroundTint="@color/id_tag"
+            android:text="@string/refund"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/roomsList"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="3dp"
+    >
+    <!--app:cardCornerRadius="@dimen/cardview_radius"-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/reserve_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/generated_id"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/text_padding"/>
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type"
+            android:textSize="@dimen/font_size"
+            android:textColor="@color/black"
+            android:layout_below="@id/reserve_id"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/text_padding"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            android:textSize="@dimen/font_size"
+            android:textColor="@color/black"
+            android:layout_below="@id/type"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/text_padding"/>
+
+        <TextView
+            android:id="@+id/rectangle_box_design"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_box"
+            android:layout_below="@id/status"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

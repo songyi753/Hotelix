@@ -1,0 +1,165 @@
+<resources>
+    <string name="app_name">Hotelix Application</string>
+    <string name="log_in">Log In</string>
+    <string name="email"><i>Email</i></string>
+    <string name="password"><i>Password</i></string>
+    <string name="type_your_email">Type Your Email</string>
+    <string name="forgot_your_password">Forgot Your Password?</string>
+    <string name="send">SEND</string>
+    <string name="modify_reservation">Modify Reservation</string>
+    <string name="reservation_id">Reservation ID</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="reservation_date">Reservation Date</string>
+    <string name="cancel">Cancel</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="modify">Modify</string>
+    <string name="submit">submit</string>
+    <string name="add_reservation">Add Reservation</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="kuantan_malaysia">Kuantan, Malaysia</string>
+
+    <!--  live data string  -->
+    <!--  Kelvin  -->
+    <string name="forget_password">Forget password?</string>
+    <string name="forget_pass_hyper_link">Reset here</string>
+    <string name="generated_id">Generated ID</string>
+    <string name="profile">Profile</string>
+    <string name="room_record">Room Record</string>
+    <string name="reservation_list">Reservation List</string>
+    <string name="clock_in_and_out">Clock in and out</string>
+    <string name="payment_record">Payment Record</string>
+    <string name="housekeeping_manage">Housekeeping Manage</string>
+    <string name="check_in_list">Check In List</string>
+    <string name="staff_list">Staff List</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="minutes_length">%d minutes on %s</string>
+    <string name="hours_length">%d hours on %s</string>
+    <string name="seconds_length">%d seconds on %s</string>
+    <string name="ClockInAndOut">ClockIn/ClockOut</string>
+    <string name="TimeNow">TimeNow:</string>
+    <string name="ClockIn">Clock In</string>
+    <string name="ClockOut">Clock Out</string>
+    <string name="StaffManagement">Staff Management</string>
+    <string name="AddStaff">Add Staff</string>
+    <string name="ModifyDeleteStaff">Modify/DeleteStaff</string>
+    <string name="StaffPosition">position</string>
+    <string name="LoginID">LoginID</string>
+    <string name="Name">Name</string>
+    <string name="Password">Password</string>
+    <string name="Add">Add</string>
+    <string name="StaffPhoto">StaffPhoto</string>
+    <string name="ComfirmPassword">Comfirm password</string>
+    <string name="ManageDeleteStaff">Manage/Delete Staff</string>
+    <string name="Edit">Edit</string>
+    <string name="Delete">Delete</string>
+    <string name="staffnameid">Heng Songyi - ID:A2086</string>
+    <string name="IC">IC_NO</string>
+    <string name="Age">Age</string>
+    <string name="Address">Address</string>
+    <string name="Phone">Phone</string>
+    <string name="Setting">Setting</string>
+    <string name="HelpCentre">Help Centre</string>
+    <string name="PrivacyPolicy">Privacy Policy</string>
+    <string name="AppFeedback">App Feedback</string>
+    <string name="Logout">Logout</string>
+
+    <!--  Kok Sing  -->
+    <string name="payment_info">Payment Info</string>
+    <string name="search_reservation_id_name">Search Reservation ID/Name</string>
+    <string name="search">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="history">History</string>
+    <string name="refund">Refund</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="paid_amount">Paid Amount (RM)</string>
+    <string name="payment_date">Payment Date</string>
+    <string name="room_cleaning_status">Room Cleaning Status</string>
+    <string name="room_cleaned">Room Cleaned</string>
+    <string name="in_process">In Process</string>
+    <string name="room_not_cleaned">Room Not Cleaned</string>
+    <string name="add">Add</string>
+    <string name="view">View</string>
+    <string name="finish">Finish</string>
+    <string name="task_list">Task List</string>
+
+    <!--  profile  -->
+    <string name="name_chong_kah_chun_kelvin">Name : Chong Kah Chun Kelvin</string>
+    <string name="position_manager">Position : Manager</string>
+    <string name="email_chongkck_wm18_student_tarc_edu_my">Email : chongkck-wm18@student.tarc.edu.my</string>
+    <!--  manager profile  -->
+    <string name="id_m001">ID : M001</string>
+    <string name="manager_name">manager name</string>
+    <string name="manager_username">manager username</string>
+    <string name="manager_password">manager password</string>
+    <string name="manager_email">manager email</string>
+    <!-- staff profile  -->
+    <string name="s001">S001</string>
+    <string name="staff_name">staff name</string>
+    <string name="staff_username">staff username</string>
+    <string name="staff_password">staff password</string>
+    <string name="staff_email">staff email</string>
+    <string name="change_email">Change Email</string>
+    <string name="change_password">Change Password</string>
+    <string name="enter_name_to_modify">Modify your name here</string>
+    <string name="add_customer">Add Customer</string>
+    <string name="insertprofilepic">insertProfilePic</string>
+    <!--  others  -->
+    <string name="back">Back</string>
+    <string name="delete">Delete</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="room_name">Room Name</string>
+    <string name="room_status">Room Status</string>
+    <string name="cleaner_name">Cleaner Name</string>
+    <string name="update">Update</string>
+    <string name="customer">CUSTOMER</string>
+    <string name="cash">Cash</string>
+
+    <string-array name="status">
+        <item>Room Cleaned</item>
+        <item>In Process</item>
+        <item>Room Not Cleaned</item>
+    </string-array>
+
+    <string-array name="payment_method_array">
+        <item>Cash</item>
+        <item>Credit Card/Debit Card</item>
+        <item>E-Wallet</item>
+    </string-array>
+
+    <string name="room_availability">Room Availability</string>
+    <string name="single_room">Single Room</string>
+    <string name="singleroomimage">singleRoomImage</string>
+    <string name="viproomimage">vipRoomImage</string>
+    <string name="vip_room">Vip Room</string>
+    <string name="president_room">President Room</string>
+    <string name="add_room">Add Room</string>
+    <string name="room_type">Room Type</string>
+    <string name="type">Type</string>
+
+    <string-array name="roomType">
+        <item>single</item>
+        <item>vip</item>
+        <item>president</item>
+    </string-array>
+    <string-array name="single">
+        <item>single</item>
+    </string-array>
+    <string-array name="vip">
+        <item>vip</item>
+    </string-array>
+    <string-array name="president">
+        <item>president</item>
+    </string-array>
+    <string-array name="roomStatus">
+        <item>checkout</item>
+        <item>pending</item>
+        <item>checkin</item>
+    </string-array>
+
+    <string-array name="reservePending">
+        <item>pending</item>
+    </string-array>
+</resources>

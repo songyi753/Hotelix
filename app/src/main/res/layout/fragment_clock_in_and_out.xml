@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ClockInAndOutFragment">
+
+    <data>
+        <variable
+            name="reservationListViewModel"
+            type="com.example.hotelix_application.model.clockinandout.ClockInAndOutViewModel" />
+
+        <variable
+            name="reservationListFragment"
+            type="com.example.hotelix_application.ClockInAndOutFragment" />
+    </data>
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ClockInOutConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/application_theme"
+        >
+
+        <TextView
+            android:id="@+id/ClockInAndOutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/ClockInAndOut"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TimeNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/TimeNow"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ClockInAndOutTitle"
+            tools:ignore="MissingConstraints" />
+
+        <TextClock
+            android:id="@+id/textClock1"
+            android:layout_width="317dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="36dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TimeNow"
+            android:format12Hour="MMM dd, yyyy k:mm:ss"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/ClockOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:text="@string/ClockOut"
+            android:radius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ClockIn"
+            app:layout_constraintTop_toBottomOf="@+id/textClock1" />
+
+        <Button
+            android:id="@+id/ClockIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="@string/ClockIn"
+            android:radius="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/ClockOut"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textClock1" />
+
+        <LinearLayout
+            android:id="@+id/clockFrameLayout"
+            android:layout_width="409dp"
+            android:layout_height="279dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ClockIn"
+            tools:ignore="MissingConstraints">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/clock_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="279dp">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

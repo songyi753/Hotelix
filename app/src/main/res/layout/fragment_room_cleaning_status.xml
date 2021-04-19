@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".statusfragment.RoomCleaningStatusFragment">
+
+    <data>
+        <variable
+            name="statusViewModel"
+            type="com.example.hotelix_application.database.status.StatusViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/room_cleaning_status_constrainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/application_theme">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/room_cleaning_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/room_cleaning_status"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/room_cleaned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/room_cleaned"
+            android:textColor="@color/id_tag"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/room_cleaning_status" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/in_process"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36sp"
+            android:layout_marginTop="6dp"
+            android:text="@string/in_process"
+            android:textColor="@color/yellow_underline"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@id/room_cleaned"
+            app:layout_constraintTop_toBottomOf="@id/room_cleaning_status" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/room_not_cleaned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/room_not_cleaned"
+            android:textColor="@color/btnColorRed"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@id/in_process"
+            app:layout_constraintTop_toBottomOf="@id/room_cleaning_status" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/status_list_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/floatingActionButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/in_process" />
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/back_button"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="25dp"-->
+        <!--            android:layout_marginBottom="20dp"-->
+        <!--            android:backgroundTint="@color/id_tag"-->
+        <!--            android:text="@string/back"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"/>-->
+        <!--&lt;!&ndash;            android:onClick="@{() -> taskListViewModel.addTask()}"/>&ndash;&gt;-->
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/view_task_list"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginBottom="24dp"-->
+        <!--            android:backgroundTint="@color/id_tag"-->
+        <!--            android:text="@string/view"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="60dp"
+            android:clickable="true"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

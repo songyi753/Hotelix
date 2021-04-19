@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AddStaffFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/AddStaffConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/application_theme">
+
+        <TextView
+            android:id="@+id/AddStaff"
+            android:layout_width="@dimen/regular_box_width"
+            android:layout_height="@dimen/regular_box_height"
+            android:layout_marginTop="27dp"
+            android:text="@string/AddStaff"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/StaffPhoto"
+            android:layout_width="112dp"
+            android:layout_height="102dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/StaffPhoto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AddStaff"
+            tools:src="@tools:sample/avatars" />
+
+        <EditText
+            android:id="@+id/EditTextStaffName"
+            android:layout_width="@dimen/regular_box_width"
+            android:layout_height="@dimen/regular_box_height"
+            android:layout_marginTop="28dp"
+            android:autofillHints="@string/Name"
+            android:background="@drawable/rounded_box"
+            android:ems="10"
+            android:hint="@string/Name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/StaffPhoto" />
+
+        <EditText
+            android:id="@+id/EditTextLoginID"
+            android:layout_width="@dimen/regular_box_width"
+            android:layout_height="@dimen/regular_box_height"
+            android:layout_marginTop="28dp"
+            android:autofillHints="Email"
+            android:background="@drawable/rounded_box"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EditTextStaffName" />
+
+        <EditText
+            android:id="@+id/EditTextPassword"
+            android:layout_width="@dimen/regular_box_width"
+            android:layout_height="@dimen/regular_box_height"
+            android:layout_marginTop="28dp"
+            android:autofillHints="@string/Password"
+            android:background="@drawable/rounded_box"
+            android:ems="10"
+            android:hint="@string/Password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EditTextLoginID" />
+
+        <EditText
+            android:id="@+id/EditTextComfirmPassword"
+            android:layout_width="@dimen/regular_box_width"
+            android:layout_height="@dimen/regular_box_height"
+            android:layout_marginTop="28dp"
+            android:autofillHints="Manager Password"
+            android:background="@drawable/rounded_box"
+            android:ems="10"
+            android:hint="Manager Password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EditTextPassword" />
+
+        <Button
+            android:id="@+id/AddStaffButton"
+            android:layout_width="@dimen/regular_btn_width"
+            android:layout_height="@dimen/regular_btn_height"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="@string/Add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.905"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EditTextComfirmPassword" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

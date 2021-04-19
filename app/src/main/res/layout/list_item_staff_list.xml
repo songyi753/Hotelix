@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/staff_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgColor">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/bgColor"
+            android:backgroundTint="@color/bgColor"
+            android:padding="@dimen/text_padding"
+            android:text="ID"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView4"
+            android:background="@color/bgColor"
+            android:backgroundTint="@color/bgColor"
+            android:padding="@dimen/text_padding"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView5"
+            android:background="@color/bgColor"
+            android:backgroundTint="@color/bgColor"
+            android:padding="@dimen/text_padding"
+            android:text="Position"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView6"
+            android:background="@color/bgColor"
+            android:backgroundTint="@color/bgColor"
+            android:padding="@dimen/text_padding"
+            android:text="email"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size" />
+
+        <TextView
+            android:id="@+id/rectangle_box_design"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView7"
+            android:background="@drawable/rectangle_box"
+            android:backgroundTint="@color/black"
+            android:padding="@dimen/text_padding" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="3dp"
+    >
+    <!--app:cardCornerRadius="@dimen/cardview_radius"-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgColor">
+
+        <TextView
+            android:id="@+id/clocktitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clock In"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            android:background="@color/bgColor"
+            android:backgroundTint="@color/bgColor"
+            android:padding="@dimen/text_padding"/>
+
+        <TextView
+            android:id="@+id/startTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---"
+            android:textSize="@dimen/font_size"
+            android:textColor="@color/white"
+            android:layout_below="@id/clocktitle1"
+            android:background="@color/bgColor"
+            android:backgroundTint="@color/bgColor"
+            android:padding="@dimen/text_padding"/>
+
+        <TextView
+            android:id="@+id/clocktitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clock out"
+            android:textSize="@dimen/font_size"
+            android:textColor="@color/white"
+            android:layout_below="@id/startTime"
+            android:background="@color/bgColor"
+            android:backgroundTint="@color/bgColor"
+            android:padding="@dimen/text_padding"/>
+
+        <TextView
+            android:id="@+id/endTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---"
+            android:textSize="@dimen/font_size"
+            android:textColor="@color/white"
+            android:layout_below="@id/clocktitle2"
+            android:background="@color/bgColor"
+            android:backgroundTint="@color/bgColor"
+            android:padding="@dimen/text_padding"/>
+
+        <TextView
+            android:id="@+id/rectangle_box_design"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_box"
+            android:layout_below="@id/endTime"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

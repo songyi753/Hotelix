@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "675576139881",
+    "project_id": "hotelix-1ef21",
+    "storage_bucket": "hotelix-1ef21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675576139881:android:871aa6c12f39f1f02cd2f8",
+        "android_client_info": {
+          "package_name": "com.example.hotelix_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675576139881-hcd9kos9q2bjep0dt4391nu5icnfk1l7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hotelix_application",
+            "certificate_hash": "149347313e2fb67f87ee35ac6868217e0fb63bde"
+          }
+        },
+        {
+          "client_id": "675576139881-2t7qb7be11745cdrcbdqgq9vao2qh6f3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAatme2S84rrAuQ6To7hvFyrNsc_Qh_iUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675576139881-2t7qb7be11745cdrcbdqgq9vao2qh6f3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ManagerProfileFragment">
+
+    <data>
+        <variable
+            name="managerProfileFragment"
+            type="com.example.hotelix_application.ManagerProfileFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/managerProfileConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/application_theme"
+        android:background="@drawable/ic_background">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="32dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/insertprofilepic"
+            android:onClick="@{()-> managerProfileFragment.selectImage()}"
+            android:src="@drawable/profile_picute"
+            app:civ_circle_background_color="#3F51B5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.943"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/work_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:background="@android:color/transparent"
+            android:text="Work Status:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/office_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:text="@string/kuantan_malaysia"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/work_status" />
+
+        <ImageView
+            android:id="@+id/circle_design"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/circle_shape"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/office_location"
+            android:contentDescription="todo" />
+
+        <TextView
+            android:id="@+id/manager_id"
+            android:layout_width="113dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintStart_toEndOf="@+id/circle_design"
+            app:layout_constraintTop_toBottomOf="@+id/office_location" />
+
+        <TextView
+            android:id="@+id/manager_name"
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:background="@android:color/transparent"
+            android:text="Name:"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.048"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manager_id" />
+
+        <TextView
+            android:id="@+id/manager_position"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:text="Position:"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.047"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manager_name" />
+
+
+        <TextView
+            android:id="@+id/manager_email"
+            android:layout_width="356dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:text="Email"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manager_position" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_input"
+            android:layout_width="@dimen/regular_box_width"
+            android:layout_height="@dimen/regular_box_height"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rounded_box"
+            android:gravity="center|center_vertical"
+            android:hint="@string/enter_name_to_modify"
+            android:textSize="15sp"
+            android:textAlignment="gravity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manager_email" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/modify_btn"
+            android:layout_width="@dimen/regular_btn_width"
+            android:layout_height="@dimen/regular_btn_height"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/btnColorBlack"
+            android:onClick="@{()-> managerProfileFragment.updateUserDataToFireStore()}"
+            android:text="@string/modify"
+            app:cornerRadius="@dimen/btn_radius_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_input" />
+
+        <ImageButton
+            android:id="@+id/updateEmail"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="164dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@color/btnColorGreen"
+            android:contentDescription="todo"
+            android:onClick="@{() -> managerProfileFragment.navigateToUpdateEmail()}"
+            android:src="@drawable/ic_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+        <ImageView
+            android:id="@+id/uploadImageBtn"
+            android:layout_width="40dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/transparent"
+            android:onClick="@{()-> managerProfileFragment.uploadImage()}"
+            android:src="@drawable/ic_upload"
+            app:layout_constraintEnd_toStartOf="@+id/profile_picture"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_picture" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

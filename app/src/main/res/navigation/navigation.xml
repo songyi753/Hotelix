@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/dashBoardFragment">
+
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.example.hotelix_application.DashBoardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dash_board" >
+        <action
+            android:id="@+id/action_dashBoardFragment_to_reservationListFragment"
+            app:destination="@id/reservationListFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_managerProfileFragment"
+            app:destination="@id/managerProfileFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_roomCleaningStatusFragment"
+            app:destination="@id/roomCleaningStatusFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_searchPaymentFragment"
+            app:destination="@id/searchPaymentFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_clockInAndOutFragment"
+            app:destination="@id/clockInAndOutFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_manageDeleteStaffFragment"
+            app:destination="@id/manageDeleteStaffFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_roomAvailabilityFragment"
+            app:destination="@id/roomAvailabilityFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_statusSelectionFragment"
+            app:destination="@id/statusSelectionFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addReservationFragment"
+        android:name="com.example.hotelix_application.AddReservationFragment"
+        android:label="Add Reservation"
+        tools:layout="@layout/fragment_add_reservation" >
+        <action
+            android:id="@+id/action_addReservationFragment_to_roomAvailabilityFragment"
+            app:destination="@id/roomAvailabilityFragment"
+            app:popUpTo="@id/roomAvailabilityFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editReservationFragment"
+        android:name="com.example.hotelix_application.EditReservationFragment"
+        android:label="Edit Reservation"
+        tools:layout="@layout/fragment_edit_reservation" >
+        <action
+            android:id="@+id/action_editReservationFragment_to_reservationListFragment"
+            app:destination="@id/reservationListFragment"
+            app:popUpTo="@id/reservationListFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="currentReservation"
+            app:argType="com.example.hotelix_application.database.reservation.ReservationList" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reservationListFragment"
+        android:name="com.example.hotelix_application.ReservationListFragment"
+        android:label="Reservation List"
+        tools:layout="@layout/fragment_reservation_list" >
+        <action
+            android:id="@+id/action_reservationListFragment_to_editReservationFragment"
+            app:destination="@id/editReservationFragment" />
+        <action
+            android:id="@+id/action_reservationListFragment_to_addReservationFragment"
+            app:destination="@id/addReservationFragment" />
+        <action
+            android:id="@+id/action_reservationListFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/managerProfileFragment"
+        android:name="com.example.hotelix_application.ManagerProfileFragment"
+        android:label="Manager Profile"
+        tools:layout="@layout/fragment_manager_profile" >
+        <argument
+            android:name="currentUser"
+            app:argType="com.example.hotelix_application.database.users.UserList" />
+        <action
+            android:id="@+id/action_managerProfileFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+        <action
+            android:id="@+id/action_managerProfileFragment_to_updateEmailFragment"
+            app:destination="@id/updateEmailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/updateEmailFragment"
+        android:name="com.example.hotelix_application.UpdateEmailFragment"
+        android:label="Update Email"
+        tools:layout="@layout/fragment_update_email" >
+        <action
+            android:id="@+id/action_updateEmailFragment_to_managerProfileFragment"
+            app:destination="@id/managerProfileFragment"
+            app:popUpTo="@id/managerProfileFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/roomCleaningStatusFragment"
+        android:name="com.example.hotelix_application.statusfragment.RoomCleaningStatusFragment"
+        android:label="Room Cleaning Status"
+        tools:layout="@layout/fragment_room_cleaning_status" >
+        <action
+            android:id="@+id/action_roomCleaningStatusFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+        <action
+            android:id="@+id/action_roomCleaningStatusFragment_to_addStatusFragment"
+            app:destination="@id/addStatusFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_roomCleaningStatusFragment_to_updateStatusFragment"
+            app:destination="@id/updateStatusFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchPaymentFragment"
+        android:name="com.example.hotelix_application.paymentfragment.SearchPaymentFragment"
+        android:label="Search Payment"
+        tools:layout="@layout/fragment_search_payment" >
+        <action
+            android:id="@+id/action_searchPaymentFragment_to_addPaymentFragment"
+            app:destination="@id/addPaymentFragment" />
+        <action
+            android:id="@+id/action_searchPaymentFragment_to_displayPaymentInfoFragment"
+            app:destination="@id/displayPaymentInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/updateStatusFragment"
+        android:name="com.example.hotelix_application.statusfragment.UpdateStatusFragment"
+        android:label="Update Status"
+        tools:layout="@layout/fragment_update_status" >
+        <action
+            android:id="@+id/action_updateStatusFragment_to_roomCleaningStatusFragment"
+            app:destination="@id/roomCleaningStatusFragment"
+            app:popUpTo="@id/roomCleaningStatusFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="currentStatus"
+            app:argType="com.example.hotelix_application.database.status.Status" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addPaymentFragment"
+        android:name="com.example.hotelix_application.paymentfragment.AddPaymentFragment"
+        android:label="Add Payment"
+        tools:layout="@layout/fragment_add_payment" >
+        <action
+            android:id="@+id/action_addPaymentFragment_to_searchPaymentFragment"
+            app:destination="@id/searchPaymentFragment"
+            app:popUpTo="@id/searchPaymentFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addPaymentFragment_to_reservationListFragment"
+            app:destination="@id/reservationListFragment" />
+        <argument
+            android:name="currentReservation"
+            app:argType="com.example.hotelix_application.database.reservation.ReservationList"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/displayPaymentInfoFragment"
+        android:name="com.example.hotelix_application.paymentfragment.DisplayPaymentInfoFragment"
+        android:label="Display Payment Info"
+        tools:layout="@layout/fragment_display_payment_info" >
+        <argument
+            android:name="currentPayment"
+            app:argType="com.example.hotelix_application.database.payment.Payment" />
+        <action
+            android:id="@+id/action_displayPaymentInfoFragment_to_searchPaymentFragment"
+            app:destination="@id/searchPaymentFragment"
+            app:popUpTo="@id/searchPaymentFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_displayPaymentInfoFragment_to_fragmentPaymentHistory"
+            app:destination="@id/fragmentPaymentHistory" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentPaymentHistory"
+        android:name="com.example.hotelix_application.paymentfragment.FragmentPaymentHistory"
+        android:label="Payment History"
+        tools:layout="@layout/fragment_payment_history" >
+        <argument
+            android:name="currentPayment"
+            app:argType="com.example.hotelix_application.database.payment.Payment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/clockInAndOutFragment"
+        android:name="com.example.hotelix_application.ClockInAndOutFragment"
+        android:label="Clock In And Out"
+        tools:layout="@layout/fragment_clock_in_and_out" />
+
+    <fragment
+        android:id="@+id/addStaffFragment"
+        android:name="com.example.hotelix_application.AddStaffFragment"
+        android:label="Add Staff"
+        tools:layout="@layout/fragment_add_staff" >
+        <action
+            android:id="@+id/action_addStaffFragment_to_manageDeleteStaffFragment"
+            app:destination="@id/manageDeleteStaffFragment"
+            app:popUpTo="@id/manageDeleteStaffFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/manageDeleteStaffFragment"
+        android:name="com.example.hotelix_application.ManageDeleteStaffFragment"
+        android:label="Manage Delete Staff"
+        tools:layout="@layout/fragment_manage_delete_staff" >
+        <action
+            android:id="@+id/action_manageDeleteStaffFragment_to_addStaffFragment"
+            app:destination="@id/addStaffFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.hotelix_application.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/roomAvailabilityFragment"
+        android:name="com.example.hotelix_application.RoomAvailabilityFragment"
+        android:label="Room Availability"
+        tools:layout="@layout/fragment_room_availability" >
+
+        <action
+            android:id="@+id/action_roomAvailabilityFragment_to_roomFragment"
+            app:destination="@id/roomFragment" >
+
+        </action>
+        <argument
+            android:name="isReservation"
+            app:argType="boolean"
+            android:defaultValue="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/roomFragment"
+        android:name="com.example.hotelix_application.RoomFragment"
+        android:label="Room"
+        tools:layout="@layout/fragment_room" >
+
+        <action
+            android:id="@+id/action_roomFragment_to_editRoomFragment"
+            app:destination="@id/editRoomFragment"
+            app:popUpTo="@id/roomFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_roomFragment_to_addRoomFragment"
+            app:destination="@id/addRoomFragment" />
+        <argument
+            android:name="isReservation"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addRoomFragment"
+        android:name="com.example.hotelix_application.AddRoomFragment"
+        android:label="Add Room"
+        tools:layout="@layout/fragment_add_room" >
+
+        <argument
+            android:name="roomExtra"
+            app:argType="com.example.hotelix_application.database.Rooms.RoomExtra" />
+        <action
+            android:id="@+id/action_addRoomFragment_to_roomAvailabilityFragment"
+            app:destination="@id/roomAvailabilityFragment"
+            app:popUpTo="@id/roomAvailabilityFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editRoomFragment"
+        android:name="com.example.hotelix_application.EditRoomFragment"
+        android:label="Edit Room"
+        tools:layout="@layout/fragment_edit_room" >
+
+        <action
+            android:id="@+id/action_editRoomFragment_to_addPaymentFragment"
+            app:destination="@id/addPaymentFragment" />
+        <argument
+            android:name="currentRoom"
+            app:argType="com.example.hotelix_application.database.Rooms.RoomListWithReservation" />
+        <action
+            android:id="@+id/action_editRoomFragment_to_roomAvailabilityFragment"
+            app:destination="@id/roomAvailabilityFragment"
+            app:popUpTo="@id/roomAvailabilityFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_editRoomFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkInFragment"
+        android:name="com.example.hotelix_application.CheckInFragment"
+        android:label="Check In Room"
+        tools:layout="@layout/fragment_check_in" >
+
+        <action
+            android:id="@+id/action_checkInFragment_to_updateCheckInStatusFragment"
+            app:destination="@id/updateCheckInStatusFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/updateCheckInStatusFragment"
+        android:name="com.example.hotelix_application.UpdateCheckInStatusFragment"
+        android:label="Update Check In Status"
+        tools:layout="@layout/fragment_update_check_in_status" >
+
+        <argument
+            android:name="currentCheckIn"
+            app:argType="com.example.hotelix_application.database.Rooms.RoomsList" />
+        <action
+            android:id="@+id/action_updateCheckInStatusFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:popUpTo="@id/dashBoardFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_updateCheckInStatusFragment_to_addStatusFragment"
+            app:destination="@id/addStatusFragment" />
+        <action
+            android:id="@+id/action_updateCheckInStatusFragment_to_statusSelectionFragment"
+            app:destination="@id/statusSelectionFragment"
+            app:popUpTo="@id/statusSelectionFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/statusSelectionFragment"
+        android:name="com.example.hotelix_application.StatusSelectionFragment"
+        android:label="Status Selection"
+        tools:layout="@layout/fragment_status_selection" >
+
+        <action
+            android:id="@+id/action_statusSelectionFragment_to_checkInFragment"
+            app:destination="@id/checkInFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addStatusFragment"
+        android:name="com.example.hotelix_application.AddStatusFragment"
+        android:label="Add Status"
+        tools:layout="@layout/fragment_add_status" >
+        <action
+            android:id="@+id/action_addStatusFragment_to_roomCleaningStatusFragment"
+            app:destination="@id/roomCleaningStatusFragment"
+            app:popUpTo="@id/roomCleaningStatusFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="currentStatus"
+            app:argType="com.example.hotelix_application.database.Rooms.RoomsList"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+</navigation>

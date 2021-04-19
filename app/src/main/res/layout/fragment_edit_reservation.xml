@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EditReservationFragment">
+
+    <data>
+        <variable
+            name="reservationListViewModel"
+            type="com.example.hotelix_application.model.reservation.ReservationListViewModel"/>
+
+        <variable
+            name="editReservationFragment"
+            type="com.example.hotelix_application.EditReservationFragment" />
+    </data>
+
+    <!--  android:inputType="text|textVisiblePassword" - remove underline while typing -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/editReservationConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/application_theme">
+
+        <TextView
+            android:id="@+id/reservation_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/reservation_date"
+            android:textAlignment="center"
+            android:textColor="@color/id_tag"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modify_btn" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/modify_reservation"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/reservation_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/reservation_id"
+            android:textAlignment="center"
+            android:textColor="@color/id_tag"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/customer_name_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customer_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintBottom_toTopOf="@+id/customer_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.296"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customer_name"
+                    android:layout_width="@dimen/regular_box_width"
+                    android:layout_height="@dimen/regular_box_height"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/rounded_box"
+                    android:gravity="center|center_vertical"
+                    android:hint="@string/customer_name"
+                    android:textAlignment="gravity"
+                    android:inputType="text|textVisiblePassword"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/reservation_id"
+                    app:layout_constraintVertical_chainStyle="spread" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/reservation_date_title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="252dp"-->
+<!--            android:text="@string/reservation_date"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/font_size"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/reservation_date"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.312"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="1.0" />-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/reservation_date"-->
+<!--                    android:layout_width="@dimen/regular_box_width"-->
+<!--                    android:layout_height="@dimen/regular_box_height"-->
+<!--                    android:layout_marginTop="80dp"-->
+<!--                    android:background="@drawable/rounded_box"-->
+<!--                    android:gravity="center|center_vertical"-->
+<!--                    android:hint="@string/reservation_date"-->
+<!--                    android:textAlignment="gravity"-->
+<!--                    android:inputType="text|textVisiblePassword"-->
+<!--                    android:focusable="false"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/customer_name" />-->
+
+        <TextView
+            android:id="@+id/contact_number_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_number"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintBottom_toTopOf="@+id/contact_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.303"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customer_name"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/contact_number"
+            android:layout_width="@dimen/regular_box_width"
+            android:layout_height="@dimen/regular_box_height"
+            android:layout_marginTop="84dp"
+            android:background="@drawable/rounded_box"
+            android:gravity="center|center_vertical"
+            android:hint="@string/contact_number"
+            android:inputType="text|textVisiblePassword"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customer_name" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/modify_btn"
+            android:layout_width="@dimen/regular_btn_width"
+            android:layout_height="@dimen/regular_btn_height"
+            android:layout_marginTop="48dp"
+            android:backgroundTint="@color/btnColorBlack"
+            android:onClick="@{()-> editReservationFragment.updateReservation()}"
+            android:text="@string/modify"
+            app:cornerRadius="@dimen/btn_radius_1"
+            app:layout_constraintEnd_toStartOf="@+id/cancel_button"
+            app:layout_constraintHorizontal_bias="0.543"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_number" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_button"
+            android:layout_width="@dimen/regular_btn_width"
+            android:layout_height="@dimen/regular_btn_height"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="48dp"
+            android:backgroundTint="@color/btnColorRed"
+            android:onClick="@{()-> editReservationFragment.cancelModify()}"
+            android:text="@string/cancel"
+            app:cornerRadius="@dimen/btn_radius_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_number" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="42dp"
+            android:layout_height="57dp"
+            android:layout_marginEnd="12dp"
+            android:onClick="@{()-> editReservationFragment.deleteReservation()}"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reservation_id" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton_add_reserve_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:tint="@color/white"
+            android:onClick="@{()-> editReservationFragment.setRoomId()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reservation_date"
+            app:srcCompat="@android:drawable/ic_input_add"
+            android:contentDescription="Todo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
